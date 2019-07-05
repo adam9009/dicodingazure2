@@ -9,7 +9,7 @@ use MicrosoftAzure\Storage\Blob\Models\CreateContainerOptions;
 use MicrosoftAzure\Storage\Blob\Models\PublicAccessType;
 
 # Setup a specific instance of an Azure::Storage::Client
-$connectionString = "DefaultEndpointsProtocol=https;AccountName=nkrisatustorageaccount;AccountKey=wE32qY65GFezmBViP9qd/TeDCNk2Q75lQJb/1LaEbB3ijD1bre3cDYcM+W7U9vgcWYEMsQ/QH++VYVFq6Q4zJg==;EndpointSuffix=core.windows.net";
+$connectionString = "DefaultEndpointsProtocol=https;AccountName=satustorageaccount;AccountKey=onYaADMCRQmmhLjrQPyDo//0AIc4OuNL+hAxqls75iDcLHGp1QGe3wioilKJYc2eQxYO7YoUSQPS7C3Cp+ybbQ==;EndpointSuffix=core.windows.net";
 
 // Create blob client.
 $blobClient = BlobRestProxy::createBlobService($connectionString);
@@ -153,7 +153,7 @@ if (!empty($_GET['containerName'])) {
         // **********************************************
 
         // Replace <Subscription Key> with your valid subscription key.
-        var subscriptionKey = "e0589c6050a74eeeb8711c749fd76c47";
+        var subscriptionKey = "ba4e8d26b6224f66a3cdf2fd2119d388";
 
         // You must use the same Azure region in your REST API method as you used to
         // get your subscription keys. For example, if you got your subscription keys
@@ -164,7 +164,7 @@ if (!empty($_GET['containerName'])) {
         // If you use a free trial subscription key, you shouldn't need to change
         // this region.
         var uriBase =
-            "https://southeastasia.api.cognitive.microsoft.com/vision/v2.0/analyze";
+            "https://southeastasia.api.cognitive.microsoft.com/";
 
         // Request parameters.
         var params = {
