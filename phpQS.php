@@ -41,7 +41,7 @@ use MicrosoftAzure\Storage\Blob\Models\ListBlobsOptions;
 use MicrosoftAzure\Storage\Blob\Models\CreateContainerOptions;
 use MicrosoftAzure\Storage\Blob\Models\PublicAccessType;
 
-$connectionString = "DefaultEndpointsProtocol=https;AccountName=storageaccountdicoding;AccountKey=pjxpByxefSaq6XFYuUZ6yyCkd1Zdf4KbKAD8nLWQCW9sb40lVxF3IpFHerExuotHwuGADqeXQUIht4GrbxK7Ww==;EndpointSuffix=core.windows.net".getenv('ACCOUNT_NAME').";AccountKey=".getenv('ACCOUNT_KEY');
+$connectionString = "DefaultEndpointsProtocol=https;AccountName=storageaccountdicoding;AccountKey=TyS0P4E2geXlro5m5nYm3LQ29iQpBkNsmUeykaEE/+a+c1wLjWHhzFiuVxBp/l0DyXOF6uHeJAU1YLaU0Cr8xQ==;EndpointSuffix=core.windows.net".getenv('ACCOUNT_NAME').";AccountKey=".getenv('ACCOUNT_KEY');
 
 // Create blob client.
 $blobClient = BlobRestProxy::createBlobService($connectionString);
@@ -72,7 +72,7 @@ if (!isset($_GET["Cleanup"])) {
     $createContainerOptions->addMetaData("key1", "value1");
     $createContainerOptions->addMetaData("key2", "value2");
 
-      $containerName = "azurecontainerdicoding".generateRandomString();
+      $containerName = "blobcontainer".generateRandomString();
 
     try {
         // Create container.
