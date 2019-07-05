@@ -9,7 +9,7 @@ use MicrosoftAzure\Storage\Blob\Models\CreateContainerOptions;
 use MicrosoftAzure\Storage\Blob\Models\PublicAccessType;
 
 # Setup a specific instance of an Azure::Storage::Client
-$connectionString = "DefaultEndpointsProtocol=https;AccountName=dicodingstorageaccount;AccountKey=1aOH3gSSEVjl6ZnPZrIRIi00oyX7d26/f/7oBPxpGK73uyWbVOCEkYuMqtb2pqpS8XtpxpCWUzNd7iYiw78u1w==;EndpointSuffix=core.windows.net";
+$connectionString = "DefaultEndpointsProtocol=https;AccountName=storageaccountdicoding;AccountKey=pjxpByxefSaq6XFYuUZ6yyCkd1Zdf4KbKAD8nLWQCW9sb40lVxF3IpFHerExuotHwuGADqeXQUIht4GrbxK7Ww==;EndpointSuffix=core.windows.net";
 
 // Create blob client.
 $blobClient = BlobRestProxy::createBlobService($connectionString);
@@ -23,7 +23,7 @@ $createContainerOptions->setPublicAccess(PublicAccessType::CONTAINER_AND_BLOBS);
 $createContainerOptions->addMetaData("key1", "value1");
 $createContainerOptions->addMetaData("key2", "value2");
 
-$containerName = "dicodingblobcontainer" . generateRandomString();
+$containerName = "popow" . generateRandomString();
 
 try {
     // Create container.
@@ -153,7 +153,7 @@ if (!empty($_GET['containerName'])) {
         // **********************************************
 
         // Replace <Subscription Key> with your valid subscription key.
-        var subscriptionKey = "4d5912c39b78489f8e63b0a271ee9ede";
+        var subscriptionKey = "1cb5a3c198714372810884e86ca5f1b4";
 
         // You must use the same Azure region in your REST API method as you used to
         // get your subscription keys. For example, if you got your subscription keys
@@ -164,7 +164,7 @@ if (!empty($_GET['containerName'])) {
         // If you use a free trial subscription key, you shouldn't need to change
         // this region.
         var uriBase =
-            "https://southeastasia.api.cognitive.microsoft.com/";
+            "https://southeastasia.api.cognitive.microsoft.com/vision/v2.0/analyze";
 
         // Request parameters.
         var params = {
